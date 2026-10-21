@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>WebSocket JavaScript Client</title>
+         <!-- Stylesheets & Fonts -->
+        <link href="css/plugins.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/responsive.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="wrapper">
+             <!-- Header -->
+            <header id="header" class="header-transparent header-fullwidth header-plain dark header-no-sticky">
+                <div id="header-wrap">
+                    <div class="container">
+                        <!--Logo-->
+                        <div id="logo">
+                            <!--<a href="index.html" class="logo" data-dark-logo="images/logo-dark.png">
+                            <img src="images/logo.png" alt="Polo Logo">
+                        </a>-->
+                        </div>
+                        <!--End: Logo-->
+                        <!--Top Search Form-->
+                        <div id="top-search">
+                            <form action="search-results-page.html" method="get">
+                                <input type="text" name="q" class="form-control" value="" placeholder="Start typing & press  &quot;Enter&quot;">
+                            </form>
+                        </div>
+                        <!--end: Top Search Form-->
+                       
+                        <!--Navigation Resposnive Trigger-->
+                        <div id="mainMenu-trigger">
+                            <button class="lines-button x"> <span class="lines"></span> </button>
+                        </div>
+                        <!--end: Navigation Resposnive Trigger-->
+                        <!--Navigation-->
+                        <div id="mainMenu" class="light">
+                            <div class="container">
+                                <nav>
+                                    <ul>
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                                        <li class="dropdown">
+                                            <a href="#">Progetti</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="autismo-creativo-genzano.html">Autismo Genzano </a></li>
+                                                <li><a href="evento-autismo-genzano.html">Evento Giornata Mondiale Sindrome di Asperger </a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="guide-asperger.html">Guide</a></li>
+                                        <li><a href="faq.html">Domande &amp; Risposte</a></li>
+                                        <li><a href="blog-list.html">Blog</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <!--end: Navigation-->
+                    </div>
+                </div>
+            </header>
+            <!-- end: Header -->
+
+            <!-- Page title -->
+            <section id="page-title" class="background-overlay" data-parallax-image="images/IA.jpg">
+                <div class="container">
+                    <div class="page-title text-right">
+                        <h1 class="text-uppercase text-medium">WebSocket JavaScript Client</h1>
+                    </div>
+                </div>
+            </section>
+            <!-- end: Page title -->
+
+            <section class="p-b-10">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10">
+                        
+                            <p id="stateLabel"> Ready to connect</p>
+                            <p id="connIDLable"> ConnID: N/a</p>
+                            <div>
+                                <label for="connectionUrl">WebSocket Server Url.</label>
+                                <input id="connectionUrl" />
+                                <button id="connectButton" type="submit">Connect</button>
+                                <button id="closeButton" disabled>Close Socket</button>
+                            </div>
+                            <p></p>
+                            <div>
+                                <label for="sendMessage">Message:</label>
+                                <input id="sendMessage" disabled />
+                                <button id="sendButton" type="submit" disabled>Send</button>
+                            </div>
+                            <p></p>
+                            <div>
+                                <label for="recipents">Recipent ID:</label>
+                                <input id="recipents" disabled />
+                            </div>
+                            <p></p>
+                            <h2>Communication Log</h2>
+                            <table style="width: 800px;">
+                                <thead>
+                                    <tr>
+                                        <td style="width: 100px;">from</td>
+                                        <td style="width: 100px;">To</td>
+                                        <td>Data</td>
+                                    </tr>
+                                </thead>
+                                <tbody id="commsLog"></tbody>
+                            </table>
+                            
+                            
+                            
+                                
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+
+
+
+           
+
+             <!-- Footer -->
+            <footer id="footer" class="footer-light">
+                <div class="footer-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 text-center">
+                                <!-- Footer widget area 1 -->
+                                <div class="widget clearfix widget-contact-us" style="background-image: url('images/world-map-dark.png'); background-position: 50% 20px; background-repeat: no-repeat">
+                                    <!--<h4>Aspintendo</h4>-->
+                                    <div style="margin-bottom:26px;">
+                                        <img src="images/logo/scritta3.png" />
+                                    </div>
+                                    <ul class="list-icon">
+                                        <li><i class="fa fa-map-marker-alt"></i> Roma, Italia
+
+                                        <li>
+                                            <i class="far fa-envelope"></i> <a href="mailto:aspintendo@sindromeasperger.it">aspintendo@sindromeasperger.it</a>
+                                        </li>
+
+                                    </ul>
+                                    <!-- Social icons -->
+                                    <div class="social-icons social-icons-border text-center">
+                                        <ul>
+                                            <li class="social-facebook"><a href="https://www.facebook.com/aspintendo-102451537806198/"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li class="social-twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                            <li class="social-pinterest"><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                                            <li class="social-instagram"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- end: Social icons -->
+                                </div>
+                                <!-- end: Footer widget area 1 -->
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright-content">
+                    <div class="container">
+                        <div class="copyright-text text-center">
+                            &copy; 2019 SA - Aspintendo. All Rights Reserved.
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end: Footer -->
+
+        </div>   <!-- end: Wrapper -->
+    </body>
+    <script src="js/jquery.js"></script>
+    <script src="js/plugins.js"></script>
+
+    <!--Template functions-->
+    <script src="js/functions.js"></script> 
+
+    <script>
+        var connectionUrl = document.getElementById("connectionUrl");
+        var connectButton = document.getElementById("connectButton");
+        var stateLabel = document.getElementById("stateLabel");
+        var sendMessage = document.getElementById("sendMessage");
+        var sendButton = document.getElementById("sendButton");
+        var commsLog = document.getElementById("commsLog");
+        var closeButton = document.getElementById("closeButton");
+        var recipents = document.getElementById("recipents");
+        var connID = document.getElementById("connIDLable");
+
+        connectionUrl.value = "wss://echo.websocket.org";
+
+        connectButton.onclick = function(){
+            stateLabel.innerHTML = "Attempting to connect....",
+            socket = new WebSocket(connectionUrl.value);
+            socket.onopen = function (event) {
+                updateState();
+                connection.send("Ping");
+                commsLog.innerHTML += '<tr>' +
+                '<td colspan="3">Connection opened</td>' +
+                '</tr>';
+            };
+
+            socket.onclose = function (event) {
+                updateState();
+                commsLog.innerHTML += '<tr>' +
+                '<td colspan="3">Connection closed. Code: ' + htmlEscape(event.code)
+                + 'Reason: ' + htmlEscape(event.reason) + '<td>' +
+                '</tr>';
+            }
+
+            socket.onerror=updateState();
+            socket.onmessage = function (event){
+                commsLog.innerHTML += '<tr>' +
+                '<td>Server</td>' +
+                '<td>Client</td>' +
+                '<td>' + htmlEscape(event.data) + '</td></tr>';
+                isConnID(event.data);
+            };
+
+        };
+
+        closeButton.onclick = function(){
+            if(!socket || socket.readyState !== WebSocket.OPEN){
+                alert("Socket non connected");
+            }
+            socket.close(1000, "Closing from client");
+        };
+
+        sendButton.onclick = function(){
+            if(!socket || socket.readyState !== WebSocket.OPEN){
+                alert("Socket non connected");
+            }
+            var data = constructJSON ();
+            socket.send("Hello");
+            commsLog.innerHTML += '<tr>' +
+                '<td>Server</td>' +
+                '<td>Client</td>' +
+                '<td>' + htmlEscape(data) + '</td></tr>';
+
+        }
+
+        function isConnID(str){
+            if(str.substring(0,7) == "ConnID:"){
+                connID.innerHTML = "ConnID: " + str.substring(8,45);
+            }
+        }
+        function constructJSON(){
+            return JSON.stringify({
+               "From" : connID.innerHTML.substring(8, connID.innerHTML.length),
+               "To" :  recipents.value,
+               "Message" : sendMessage.value
+            });
+        }
+
+        function htmlEscape(str){
+            return str.toString()
+            .replace(/&/g, '&amp;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;')
+            .replace(/<"/g, '&lt;')
+            .replace(/>/g, '&gt;');
+        };
+
+        function updateState(){
+            function disable(){
+                sendMessage.disabled = true;
+                sendButton.disabled = true;
+                closeButton.disabled = true;
+                recipents.disabled = true;
+            }
+            function enable(){
+                sendMessage.disabled = false;
+                sendButton.disabled = false;
+                closeButton.disabled = false;
+                recipents.disabled = false;
+            }
+            connectionUrl.disabled = true;
+            connectButton.disabled = true;
+            if(!socket){
+                disable();
+            }
+            else{
+                switch(socket.readyState){
+                    case WebSocket.CLOSED:
+                        stateLabel.innerHTML = "Closed";
+                        connID.innerHTML = "ConnID: N/a";
+                        disable();
+                        connectionUrl.disabled = false;
+                        connectButton.disabled = false;
+                        break;
+                    case WebSocket.CLOSING:
+                        stateLabel.innerHTML = "Closing....";
+                        disable();
+                        break;
+                    case WebSocket.OPEN:
+                        stateLabel.innerHTML = "Open";
+                        enable();
+                        break;
+                    default:
+                        stateLabel.innerHTML = "Unknown WebSocket State: " +htmlEscape(socket.readyState);
+                        disable();
+                        break;
+                }
+            }
+        };
+    </script>
+</html>

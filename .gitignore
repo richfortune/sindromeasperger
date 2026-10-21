@@ -1,0 +1,17 @@
+App_Data/
+mdb-database/
+cgi-bin/
+aspnet_client/
+
+*.asp
+*.aspx
+*.php
+web.config
+.user.ini
+
+*.mdb
+*.accdb
+.env
+.env.*
+*.bak
+*.log
